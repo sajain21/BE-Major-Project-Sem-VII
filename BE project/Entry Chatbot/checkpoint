@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\BE project\\ChatBot_Tensorflow_NLP-master\\model.tflearn"
+all_model_checkpoint_paths: "D:\\BE project\\ChatBot_Tensorflow_NLP-master\\model.tflearn"
