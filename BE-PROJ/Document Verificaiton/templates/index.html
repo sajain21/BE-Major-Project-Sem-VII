@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/style.css">
+  <title>Image Classification</title>
+</head>
+
+
+</style>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>D</span>ocument <span>C</span>lassification</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Welcome, <span></span></h1>
+        <br>
+        <h2 >Upload the Documents</h2>
+
+        <form action = "http://localhost:5000/uploader" method = "POST" enctype = "multipart/form-data">
+          <input type="file" id="file" name="file" style="color:rgb(250, 249, 249)" ></input><br><br>
+          <br> </br>
+          <button type="submit" id="button1" class="btn btn-primary btn-block btn-large">Predict</button>
+      
+            <div class="results">
+              {% if pred == 0%}
+		          <h2 style="color:rgb(247, 63, 100) !important;font-size: large !important;">Aadhar Card</h2>
+		          {% elif pred == 1%}
+					    <h2 style="color:rgb(123, 11, 197) !important;font-size: large !important;"><b>Driver License</b></h2>
+              {% elif pred == 2%}
+					    <h2 style="color:rgb(37, 192, 37) !important;font-size: large !important;"><b>Pan Card</b></h2>
+              {% elif pred == 3%}
+					    <h2 style="color:rgb(215, 13, 234) !important;font-size: large !important;"><b>Passport</b></h2>
+		          {% endif %}
+            </div>
+      
+        </form>
+    
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- About Us Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Abou<span>T</span>Us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum deleniti maiores pariatur assumenda quas
+          magni et, doloribus quod voluptate quasi molestiae magnam officiis dolorum, dolor provident atque molestias
+          voluptatum explicabo!</p>
+      </div>
+      <div class="service-bottom">
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Ragini Pandey</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
+            architecto placeat beatae tenetur officia quod</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Samiksha Pawar</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
+            architecto placeat beatae tenetur officia quod</p>
+        </div>
+        <div class="service-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Shreyasha Vinerkar</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
+            architecto placeat beatae tenetur officia quod</p>
+        
+      </div>
+    </div>
+  </section>
+  <!-- End Service Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>D</span>ocument <span>C</span>lassification</h1>
+      </div>
+      <h2>Your Complete Web Solution</h2>
+      <p>Ragini Pandey, Samiksha Pawar and Shreyasha Vinerkar</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+</body>
+
+</html>
